@@ -135,3 +135,6 @@ php_source_configure_command: >
   --with-bz2=/usr
   --with-recode=/usr
   --with-mysqli=/usr/bin/mysql_config
+
+## handler state var
+php_fpm_handler_action: restart

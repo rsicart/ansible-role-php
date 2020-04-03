@@ -67,7 +67,7 @@
     - regexp: '^pm\.max_spare_servers.?=.+$'
       line: "pm.max_spare_servers = {{ php_fpm_pm_max_spare_servers }}"
   when: php_enable_php_fpm
-  notify: restart php-fpm
+  notify: "{{ php_fpm_handler_action }} php-fpm"
 
 - name: Ensure php-fpm is started and enabled at boot (if configured).
   service:
